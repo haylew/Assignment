@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+    </head>
+</head>
+<body>
+<!--header.html  that's here  -->
+        <div th:replace="fragments/header :: header"></div>
+		<div layout:fragment="content" class="container">
+		
+		    <div class="jumbotron">
+		    <table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">Statement ID</th>
+			      <th scope="col">Account Number</th>
+			      <th scope="col">Name</th>
+			      <th scope="col">Date</th>
+			      <th scope="col">Old Pennies</th>
+			      <th scope="col">New Pennies</th>
+			      <th scope="col">Debit Turnover</th>
+			      <th scope="col">Credit Turnover</th>
+			      <th scope="col">Serial Number</th>
+			      <th scope="col">Postfix</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr th:each="stmt : ${statement}">
+			        <td th:text="${stmt.recordType}"></td>
+			        <td th:text="${stmt.assignedAccountNumber}"></td>
+			        <td th:text="${stmt.accountName}"></td>
+			        <td th:text="${stmt.dateOfOldBalance}"></td>
+			        <td th:text="${stmt.oldPennies}"></td>
+			        <td th:text="${stmt.newPennies}"></td>
+			        <td th:text="${stmt.debitTurnover}"></td>
+			        <td th:text="${stmt.creditTurnover}"></td>
+			        <td th:text="${stmt.serialNumber}"></td>
+			        <td th:text="${stmt.termination}"></td>
+			    </tr>
+			   </tbody>
+		    </table>
+		    <hr><br><hr>
+		    <table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">Statement ID</th>
+			      <th scope="col">Account Number</th>
+			      <th scope="col">Number</th>
+			      <th scope="col">Document Number</th>
+			      <th scope="col">Pennies Amount</th>
+			      <th scope="col">Billing code</th>
+			      <th scope="col">Date</th>
+			      <th scope="col">Client Name</th>
+			      <th scope="col">Currency code</th>
+			      <th scope="col">Date</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr th:each="to : ${turnover}">
+			        <td th:text="${to.recordType}"></td>
+			        <td th:text="${to.assignedAccountNumber}"></td>
+			        <td th:text="${to.accountNumber}"></td>
+			        <td th:text="${to.documentNumber}"></td>
+			        <td th:text="${to.amountInPennies}"></td>
+			        <td th:text="${to.billingCode}"></td>
+			        <td th:text="${to.dueDate}"></td>
+			        <td th:text="${to.clientName}"></td>
+			        <td th:text="${to.currencyCode}"></td>
+			        <td th:text="${to.date}"></td>
+			    </tr>
+			   </tbody>
+		    </table>
+		        
+		        
+		            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+		        </p>
+		    </div>
+		</div>
+		<!--footer.html  that's here  -->
+        <div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
