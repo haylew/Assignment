@@ -10,4 +10,4 @@ This project is simple demonstration that
 
 Project file structure
 
-![Screenshot from 2019-10-28 16-42-31](/home/hex0rw2/Pictures/Screenshot from 2019-10-28 16-42-31.png)
+![Project file structure](src/main/resources/img/project-structure.png)
