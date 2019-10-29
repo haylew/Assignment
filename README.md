@@ -1,4 +1,4 @@
-# Assignment
+## Assignment
 
 This project is simple demonstration that 
 
@@ -8,6 +8,13 @@ This project is simple demonstration that
 - Displays(list) the on the output window
 - And saves to MongoDB
 
-Project file structure
+## Requirement
 
-![Project file structure](src/main/resources/img/project-structure.png)
+- Spring boot
+- MongoDB
+- Eclipse IDE
+
+## Project file structure
+
+![Project file structure](src/main/resources/img/img-structure.png)
+
