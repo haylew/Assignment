@@ -1,5 +1,9 @@
-package gpc.model;
+package app.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Statement")
 public class Statement {
 
 	private String recordType;
@@ -14,6 +18,7 @@ public class Statement {
 	private String debitTurnSign;
 	private String creditTurnover;
 	private String creditTurnSign;
+	@Id
 	private String serialNumber;
 	private String datePosting;
 	private String termination;

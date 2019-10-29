@@ -1,10 +1,15 @@
-package gpc.model;
+package app.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="Turnover")
 public class Turnover {
 
 	private String recordType;
 	private String assignedAccountNumber;
 	private String accountNumber;
+	@Id
 	private String documentNumber;
 	private String amountInPennies;
 	private String billingCode;

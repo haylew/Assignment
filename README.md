@@ -28,8 +28,7 @@ I have used a documentation for ***gpc*** file format from FIO bank website and 
 
 https://www.fio.cz/docs/cz/API_Bankovnictvi.pdf
 
-Originally the documentation was on Czech language 
+Originally the documentation was on Czech language is the translated that i have used is below
 
-[here]: gpc-file-documentation.docx	"Translated GPC file Documentation"
+https://github.com/hex0rw2/Assignment/blob/master/gpc-file-documentation.docx?raw=true
 
- is the translated that i have used.
